@@ -1,0 +1,136 @@
+.auth-page-card {
+    /* background-color: lightblue; */
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    height: 100vh;
+}
+.site-info-section {
+    width: 50%;
+    /* background-color: lightcoral; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.auth-section {
+    width: 50%;
+    /* background-color: lightgrey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-section {
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    font-size: 4rem;
+    margin-left: 1rem;
+}
+.title-highlighted-section {
+    margin-right: 0.5rem;
+}
+.title-unhighlighted-section {
+    color: #57606f;
+}
+.title-highlighted-name {
+    color: #2ecc71;
+}
+.title-highlighter {
+    height: 1rem;
+    width: 50%;
+    background-color: #2ecc71;
+    animation-name: highlighter;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes highlighter {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+.description-section {
+    margin-left: 1rem;
+    margin-top: 0.6rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.9rem;
+    color: #57606f;
+}
+.auth-card {
+    background-color: #0F1218;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 70%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 3px;
+    padding: 1rem;
+}
+.auth-card > * {
+    margin: 1rem auto;
+}
+.display-block {
+    display: block;
+}
+.sign-in-btn {
+    margin-top: 1rem;
+    background-color: #2ecc71;
+    color: #dfe4ea;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.gsign-up-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #a5b1c2;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.input-section {
+    width: 80%; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.input-section > * {
+    margin-bottom: 0.3rem;
+}
+.input-items {
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    position: relative;
+}
+.label {
+    color: #a5b1c2;
+    font-size: 0.9rem;
+}
+.input-section input {
+    background-color: #dfe4ea;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #353b48;
+}
+.file-input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #57606f;
+}
+.file-input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}

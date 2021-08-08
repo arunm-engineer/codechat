@@ -1,0 +1,43 @@
+.header-section {
+    height: 4rem;
+    background-color: #0C0C0F;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    justify-content: space-between;
+}
+.h-title-section {
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+.h-title-highlighted-section {
+    margin-right: 0.5rem;
+}
+.h-title-unhighlighted-section {
+    color: #57606f;
+}
+.h-title-highlighted-name {
+    color: #2ecc71;
+}
+.h-title-highlighter {
+    height: 0.5rem;
+    width: 50%;
+    background-color: #2ecc71;
+    animation-name: highlighter;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes highlighter {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+.MuiList-root {
+    background-color: #2f3640;
+    color: #d1d8e0;
+    font-family: 'Roboto', sans-serif;
+}

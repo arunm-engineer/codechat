@@ -1,23 +1,27 @@
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PageRouters from "./components/PageRouters"
+
 
 function App() {
+
+  // Notifications API on app start for message pop-ups
+  useEffect(() => {
+    console.log(Notification.permission);
+    if (Notification.permission !== "granted") {
+      Notification.requestPermission().then(permission => {
+        console.log(permission);
+      })
+      .catch(() => {
+        console.log("Error in Notification");
+      })
+    }
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PageRouters />
     </div>
   );
 }

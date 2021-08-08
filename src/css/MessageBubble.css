@@ -1,0 +1,32 @@
+.message-box {
+    color:#f1f2f6;
+
+    display: flex;
+    border-radius: 3px 12px 12px 12px;
+    margin-bottom: 1rem;
+}
+.message-details {
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    font-weight: 400;
+}
+.msg-avatar {
+    padding: 0.4rem;
+    width: 8%;
+    display: flex;
+    justify-content: center;
+}
+.time {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Sent */
+/* #8395a7 */
+
+/* Received */
+/* #353b48 */

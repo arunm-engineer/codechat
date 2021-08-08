@@ -1,0 +1,45 @@
+.editor-header-main {
+    height: 3rem;
+    background-color: #2f3640;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 1rem;
+}
+
+.editor-settings {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    height: 100%;
+    border-radius: 3px;
+    /* background-color: pink; */
+    background-color: #2f3640;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    color: #d1d8e0;
+    cursor: pointer;
+}
+
+.action-btn {
+    color: #dfeaf7;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.push-btn {
+    background-color: #2ecc71;
+}
+
+.pull-btn {
+    background-color: #c44569;
+}

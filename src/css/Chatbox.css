@@ -1,0 +1,107 @@
+.chatbox-main-section {
+    width: 40%;
+    background-color: #222831;
+}
+.chat-header {
+    height: 3rem;
+}
+.chat-body {
+    /* height: 80%; */
+    height: calc( 100vh - 4rem - 4rem - 1rem - 3rem );
+    overflow: auto;
+    padding: 1rem;
+}
+.chat-editor {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.c-title-section {
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    margin-left: 3rem;
+}
+.c-title-highlighted-section {
+    margin-right: 0.5rem;
+}
+.c-title-unhighlighted-section {
+    color: #57606f;
+}
+.c-title-highlighted-name {
+    color: #2ecc71;
+}
+.c-title-highlighter {
+    height: 0.5rem;
+    width: 50%;
+    background-color: #2ecc71;
+    animation-name: highlighter;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes highlighter {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+.chat-textbox {
+    width: 85%;
+}
+.chat-textbox > textarea {
+    outline: none;
+    resize: none;
+    border: none;
+    width: 100%;
+    background-color: #393E46;
+    border-radius: 6px;
+    height: 3rem;
+    color: white;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.chat-send-icon {
+    height: 3rem;
+    width: 8%;
+    border-radius: 6px;
+    background-color: #393E46;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2ecc71;
+    cursor: pointer;
+}
+
+.chat-header {
+    height: 3rem;
+    color: #c8d6e5;
+    display: flex;
+    align-items: center;
+    background-color: #393E46;
+}
+
+.user-avatar {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+}
+.chatbox-username-section {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+}
+.search-user {
+    font-size: large;
+    cursor: pointer;
+}

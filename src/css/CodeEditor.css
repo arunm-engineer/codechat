@@ -1,0 +1,21 @@
+.codeeditor-main-section {
+    width: 60%;
+    background-color: lightgrey;
+}
+
+.CodeMirror-wrap {
+    font-size: 1rem;
+}
+
+.cm-s-dracula.CodeMirror {
+    height: calc( 100vh - 7rem );
+}
+.cm-s-icecoder.CodeMirror {
+    height: calc( 100vh - 7rem );
+}
+.cm-s-shadowfox.CodeMirror {
+    height: calc( 100vh - 7rem );
+}
+.cm-s-neat.CodeMirror {
+    height: calc( 100vh - 7rem );
+}

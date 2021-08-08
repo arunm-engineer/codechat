@@ -3,11 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
+import {createFirestoreInstance} from "redux-firestore";
+import { ReactReduxFirebaseProvider } from "react-redux-firebase";
+import firebase from "firebase/app";
+import firebaseConfig from "./secrets";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <ReactReduxFirebaseProvider
+        firebase={firebase}
+        config={firebaseConfig}
+        dispatch={store.dispatch}
+        createFirestoreInstance={createFirestoreInstance}
+      >
+        <App />
+      </ReactReduxFirebaseProvider>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
