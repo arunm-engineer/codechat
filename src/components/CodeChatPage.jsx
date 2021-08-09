@@ -6,11 +6,8 @@ import CodeEditor from './CodeEditor';
 import Chatbox from './Chatbox';
 import "../css/CodeChatPage.css";
 import { fetchUsersMiddleWare } from '../redux/middlewares/fetchUsersMiddleWare';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 function CodeChatPage(props) {
-
-    const { loading } = props?.authStateSignIn;
 
     useEffect(() => {
         props.fetchUsers();
