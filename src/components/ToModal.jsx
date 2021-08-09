@@ -20,7 +20,7 @@ function ToModal(props) {
         paper: {
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
-            width: "35vw",
+            minWidth: "35vw",
             maxHeight: "60vh",
             borderRadius: "10px",
             textAlign: "center",
@@ -52,6 +52,7 @@ function ToModal(props) {
         },
         username: {
             color: "#f1f2f6",
+            fontFamily: "Roboto, sans-serif"
         }
     }))
     let classes = useStyles();

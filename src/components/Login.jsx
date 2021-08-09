@@ -11,7 +11,11 @@ function Login(props) {
     const [password, setPassword] = useState("");
 
     const handleSignIn = () => {
-        props.signIn({email, password});
+        if (email && password) {
+            props.signIn({email, password});
+            return;
+        }
+        alert("Please check your credentials again.");
     }
 
     useEffect(() => {

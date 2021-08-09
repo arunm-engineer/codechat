@@ -24,23 +24,23 @@ export function messageMiddleWare(message) {
         let createdAt = createdAtTimeObj.toString().split(" ")[4].substring(0, 5);
         // Create chat message objects to update with for both users
         let currentUserMessageObj = {
-            userId: currentUserId,
             profileImageURL: currentuserPhotoURL,
             username: currentUserName,
             mode: "SENT",
             message,
             uniqueMessageId: uuidv4(),
+            sendTo: codeChatWithUserId,
             createdAt
         }
 
         // Both the users (sender & receiver) will contain photo, id, username of the sender only
         let codeChatWithUserMessageObj = {
-            userId: currentUserId,
             profileImageURL: currentuserPhotoURL,
             username: currentUserName,
             mode: "RECEIVED",
             message,
             uniqueMessageId: uuidv4(),
+            receivedFrom: currentUserId,
             createdAt
         }
 

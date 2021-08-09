@@ -1,19 +1,22 @@
 .editor-header-main {
     height: 3rem;
-    background-color: #2f3640;
+    /* background-color: #2f3640; */
+    background-color: #0C0C0F;
     display: flex;
     align-items: center;
     /* justify-content: space-around; */
     gap: 1rem;
+    border-top: 1px solid #2f3640;
 }
 
 .editor-settings {
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     height: 100%;
     border-radius: 3px;
     /* background-color: pink; */
-    background-color: #2f3640;
+    /* background-color: #2f3640; */
+    background-color: #0C0C0F;
     border: none;
     outline: none;
     padding: 0.5rem;
@@ -24,10 +27,10 @@
 .action-btn {
     color: #dfeaf7;
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     height: 2rem;
     width: 4rem;
-    border-radius: 6px;
+    border-radius: 3px;
     font-size: 0.8rem;
     display: flex;
     justify-content: center;
@@ -37,9 +40,46 @@
 }
 
 .push-btn {
-    background-color: #2ecc71;
+    /* background-color: #2ecc71; */
+    /* border: 1px solid #0652DD; */
+    border: 1px solid #2980b9;
+    color: #2980b9;
 }
 
 .pull-btn {
-    background-color: #c44569;
+    /* background-color: #c44569; */
+    /* border: 1px solid #c44569; */
+    border: 1px solid #82589F;
+    color: #82589F;
+}
+.search-user {
+    margin-right: 0.5rem;
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .editor-settings {
+        padding: 0.2rem;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 426px) {
+    .editor-settings {
+        padding: 0.2rem;
+    }
+    .action-btn {
+        width: 3rem;
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .editor-header-main {
+        overflow: auto;
+    }
+    .editor-settings {
+        padding: 0.2rem;
+        font-size: 0.7rem;
+    }
+    .action-btn {
+        width: 3rem;
+        font-size: 0.7rem;
+    }
 }

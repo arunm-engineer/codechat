@@ -16,14 +16,20 @@ function Signup(props) {
 
     const handleFile = (e) => {
         let inputFile = e?.target?.files[0];
-        if (!inputFile) return;
+        if (!inputFile) {
+            setFile(null);
+            return;
+        }
         setFile(inputFile);
     }
 
     const handleSignUp = (e) => {
         e.preventDefault();
-        if (username && email && password)
+        if (username && email && password && file) {
             props.signUp({username, email, password, file});
+            return;
+        }
+        alert("Please check your credentials again.");
     }
 
     const handleGSignUp = (e) => {

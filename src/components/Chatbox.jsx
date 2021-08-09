@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import "../css/Chatbox.css";
-import MessageBubble from './MessageBubble';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import * as actionTypes from "../redux/actionTypes";
@@ -8,10 +7,11 @@ import { messageMiddleWare } from '../redux/middlewares/messageMiddleWare';
 import { Avatar, Modal, Backdrop, Fade, Button, Divider } from '@material-ui/core';
 import ToModal from './ToModal';
 import { fetchMessagesMiddleWare } from '../redux/middlewares/fetchMessagesMiddleWare';
-
+import SentMessage from './SentMessage';
+import ReceivedMessage from './ReceivedMessage';
 
 function Chatbox(props) {
-    // console.log(props);
+    console.log(props);
 
     // Controlling ToModal from here to operate "Code chat with -> user easily and perform operation"
     const [open, setOpen] = useState(true);
@@ -51,8 +51,14 @@ function Chatbox(props) {
         props.fetchMessages();
     }, [props?.codeChatWith])
 
+    useEffect(() => {
+        let referenceElement = document.querySelector(".scroll-down-reference");
+        referenceElement.scrollIntoView({ behavior: "smooth" });
+    }, [chatMessages])
+
     return (
         <>
+
             <ToModal handleOpen={handleOpen} handleClose={handleClose} open={open} />
             <div className="chatbox-main-section">
                 <div className="chat-header">
@@ -67,9 +73,12 @@ function Chatbox(props) {
                 <div className="chat-body">
                     {
                         chatMessages.map(messageObj => {
-                            return <MessageBubble key={messageObj.uniqueMessageId} messageObj={messageObj} />
+                            return messageObj.mode === "SENT" ?
+                                <SentMessage key={messageObj.uniqueMessageId} messageObj={messageObj} /> :
+                                <ReceivedMessage key={messageObj.uniqueMessageId} messageObj={messageObj} />
                         })
                     }
+                    <div className="scroll-down-reference"></div>
                 </div>
                 <div className="chat-editor">
                     <div className="chat-textbox">
