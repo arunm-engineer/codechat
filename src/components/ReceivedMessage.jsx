@@ -5,7 +5,7 @@ import { Avatar } from '@material-ui/core';
 
 export default function ReceivedMessage(props) {
     const { userId, profileImageURL, username, mode, message, createdAt } = props.messageObj;
-    console.log(props);
+
     return (
         <div className="received-msg">
             <div className="message-box received-msg-box">

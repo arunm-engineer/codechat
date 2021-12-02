@@ -11,7 +11,7 @@ import SentMessage from './SentMessage';
 import ReceivedMessage from './ReceivedMessage';
 
 function Chatbox(props) {
-    console.log(props);
+    // console.log(props);
 
     // Controlling ToModal from here to operate "Code chat with -> user easily and perform operation"
     const [open, setOpen] = useState(true);
@@ -33,6 +33,7 @@ function Chatbox(props) {
                 body: message,
                 icon: currentuserPhotoURL
             })
+            console.log("Notified******");
         }
     }
 

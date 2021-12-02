@@ -9,7 +9,6 @@ import * as actionTypes from "../redux/actionTypes";
 
 function Header(props) {
     const { photoURL } = props?.firebase?.auth;
-    console.log(photoURL);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleAnchorElClick = (e) => setAnchorEl(e.currentTarget);

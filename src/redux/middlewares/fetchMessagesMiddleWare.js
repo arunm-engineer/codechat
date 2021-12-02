@@ -8,8 +8,6 @@ export async function fetchMessagesMiddleWare(dispatch, getState, { getFirebase,
     let { uid: currentUserId } = getState()?.firebase?.auth;
     const { userId: codeChatWithUserId } = getState()?.codeChatWith;
 
-
-
     // Get all messages from current user's chat messages collection in DB
     await firestore.collection("chats").onSnapshot(async snapshot => {
         let currentUserRef = snapshot.docs.find(doc => doc.id === currentUserId);
@@ -19,15 +17,10 @@ export async function fetchMessagesMiddleWare(dispatch, getState, { getFirebase,
         
         const { chatMessages: currentUserMessages } = currentUserData;
         let filteredCurrentUserMessages = currentUserMessages.filter(messageObj => {
-            console.log(messageObj);
             if (messageObj.mode === "SENT") {
-                console.log(messageObj.sendTo === codeChatWithUserId);
-                console.log(messageObj.sendTo,"------", codeChatWithUserId);
                 return messageObj.sendTo === codeChatWithUserId;
             }
             else {
-                console.log(messageObj.receivedFrom === codeChatWithUserId);
-                console.log(messageObj.receivedFrom,"------", codeChatWithUserId);
                 return messageObj.receivedFrom === codeChatWithUserId;
             }
             

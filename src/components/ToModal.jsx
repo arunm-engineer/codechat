@@ -28,8 +28,8 @@ function ToModal(props) {
             backgroundColor: "#0C0C0F"
         },
         usersContainer: {
-            overflow: "auto",
-            height: "90%"
+            overflow: "scroll",
+            height: "20rem"
         },
         userSection: {
             display: "flex",
@@ -114,7 +114,6 @@ const mapStateToProps = (store, ownProps) => {
 const mapDistpatchToProps = (dispatch) => {
     return {
         updateCodeChatWith: (codeChatWithObj) => {
-            console.log(codeChatWithObj);
             dispatch({ type: actionTypes.UPDATE_CODE_CHAT_WITH, payload: codeChatWithObj })
         }
     }
